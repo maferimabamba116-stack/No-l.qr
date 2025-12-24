@@ -1,0 +1,71 @@
+/* 🎄 Police élégante pour Noël */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Mountains+of+Christmas:wght@400;700&display=swap');
+
+/* 🎅 Style global */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    overflow: hidden;
+    background-color: #0b3d2e; /* vert sapin */
+}
+
+/* 🎄 Fond Noël (dégradé vert + rouge) */
+.background-noel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top, #b30000, #0b3d2e);
+    z-index: -2;
+}
+
+/* ❄️ Effet neige léger */
+.background-noel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px, 80px 80px;
+    background-position: 0 0, 25px 25px;
+    opacity: 0.25;
+}
+
+/* 🎁 Conteneur du message */
+.message-container {
+    background-color: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* 🎄 Message principal */
+.love-message {
+    font-size: 1.7em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* 🎅 Signature Noël */
+.signature {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 25px;
+    color: #ffeb3b; /* doré Noël */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
